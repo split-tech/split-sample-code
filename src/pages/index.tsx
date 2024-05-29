@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useSplit } from '../contexts/SplitContextProvider';
 import type { GetServerSideProps } from 'next';
 import { faker } from '@faker-js/faker';
+import { useSplitBrowser } from '@split-tech/browser-sdk';
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const params = query.join;
@@ -22,7 +23,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 };
 
 export default function Home({ referralCode }: { referralCode: string }) {
-  const { bootstrap, addReferral } = useSplit();
+  const { addReferral, init } = useSplitBrowser();
   const [apiKey, setApiKey] = useState('');
   const [userAddress, setUserAddress] = useState(
     faker.finance.ethereumAddress()
@@ -36,7 +37,7 @@ export default function Home({ referralCode }: { referralCode: string }) {
       if (!userAddress) {
         throw new Error('User Address is required');
       }
-      await bootstrap(apiKey);
+      await init(apiKey);
       await addReferral(userAddress);
     } catch (e: any) {
       alert(e.message);

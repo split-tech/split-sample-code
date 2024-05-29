@@ -207,10 +207,10 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.10.2.tgz#053f1540703faa81dea2966b768ee5581c66aeda"
   integrity sha512-hw437iINopmQuxWPSUEvqE56NCPsiU8N4AYtfHmJFckclktzK9YQJieD3XkDCDH4OjL+C7zgPUh73R/nrcHrqw==
 
-"@split-tech/browser-sdk@^0.3.4":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@split-tech/browser-sdk/-/browser-sdk-0.3.4.tgz#824e362555b3952e96c2495b5e75fa3cb5f847a2"
-  integrity sha512-B0PM0uiEAz0aUFvRCZ0LYd48DyR1kEEVOwAZH7tHdW11aiKKKsp7RhfsSVPO+4wDabdSigewPLSQ0sG1Cpj8gQ==
+"@split-tech/browser-sdk@^0.6.9":
+  version "0.6.9"
+  resolved "https://registry.yarnpkg.com/@split-tech/browser-sdk/-/browser-sdk-0.6.9.tgz#1da73ab5a16405f8512934da3e46737387c36c10"
+  integrity sha512-7nVkjNwRVG37vDBsK4qbWKLZrl5Tk4VG/WnyFDTlp1VcscIT7ibUH+0mttKSR/UpU0ule4EtdfAmPURFl97dPw==
   dependencies:
     encoding "^0.1.13"
     graphql "^16.8.1"

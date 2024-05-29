@@ -1,11 +1,11 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
-import { Split, SplitContextProvider } from '../contexts/SplitContextProvider';
+import { SplitBrowserProvider } from '@split-tech/browser-sdk';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <SplitContextProvider>
+    <SplitBrowserProvider apiKey="" config={{}}>
       <Component {...pageProps} />
-    </SplitContextProvider>
+    </SplitBrowserProvider>
   );
 }
