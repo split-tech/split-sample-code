@@ -12,7 +12,7 @@
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
     "@netlify/plugin-nextjs": "^5.3.2",
-    "@split-tech/browser-sdk": "^0.7.9",
+    "@split-tech/browser-sdk": "^0.8.0",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18"

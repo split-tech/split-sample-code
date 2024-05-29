@@ -22,29 +22,13 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 };
 
 export default function Home({ referralCode }: { referralCode: string }) {
-  // const { addReferral, init } = useSplitBrowser();
   const [apiKey, setApiKey] = useState('');
   const [userAddress, setUserAddress] = useState(
     faker.finance.ethereumAddress()
   );
 
-  const handleClick = async () => {
-    try {
-      if (!apiKey) {
-        throw new Error('API Key is required');
-      }
-      if (!userAddress) {
-        throw new Error('User Address is required');
-      }
-      // await init(apiKey);
-      // await addReferral(userAddress);
-    } catch (e: any) {
-      alert(e.message);
-    }
-  };
-
   return (
-    <SplitBrowserProvider apiKey={apiKey} config={{}}>
+    <SplitBrowserProvider apiKey={apiKey} config={{ referralParam: 'join' }}>
       <main
         className={`
       min-w-[500px] mx-auto p-4 space-y-4 
@@ -74,13 +58,13 @@ export default function Home({ referralCode }: { referralCode: string }) {
               />
             </label>
           </div>
-          <button
+          {/* <button
             type="button"
             className="border border-gray-300 rounded-md p-1 text-white bg-purple-500 w-full hover:bg-purple-600"
             onClick={handleClick}
           >
             Run Test
-          </button>
+          </button> */}
         </form>
       </main>
     </SplitBrowserProvider>
