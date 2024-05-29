@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
+    "@netlify/plugin-nextjs": "^5.3.2",
     "@split-tech/browser-sdk": "^0.6.9",
     "next": "14.0.4",
     "react": "^18",
